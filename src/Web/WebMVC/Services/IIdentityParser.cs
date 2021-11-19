@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Threading.Tasks;
+﻿namespace Microsoft.eShopOnContainers.WebMVC.Services;
 
-namespace Microsoft.eShopOnContainers.WebMVC.Services
+public interface IIdentityParser<T>
 {
-    public interface IIdentityParser<T>
-    {
-        T Parse(IPrincipal principal);
-    }
+    T Parse(IPrincipal principal);
 }

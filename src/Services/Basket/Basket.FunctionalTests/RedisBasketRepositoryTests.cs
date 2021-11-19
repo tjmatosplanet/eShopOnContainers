@@ -1,12 +1,4 @@
-﻿using Basket.FunctionalTests.Base;
-using Microsoft.eShopOnContainers.Services.Basket.API.Infrastructure.Repositories;
-using Microsoft.eShopOnContainers.Services.Basket.API.Model;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using StackExchange.Redis;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Xunit;
+﻿
 
 namespace Basket.FunctionalTests
 {
@@ -33,7 +25,7 @@ namespace Basket.FunctionalTests
                 Assert.Single(basket.Items);
             }
 
-            
+
         }
 
         [Fact]
@@ -58,7 +50,7 @@ namespace Basket.FunctionalTests
 
                 Assert.True(deleteResult);
                 Assert.Null(result);
-            }            
+            }
         }
 
         RedisBasketRepository BuildBasketRepository(ConnectionMultiplexer connMux)

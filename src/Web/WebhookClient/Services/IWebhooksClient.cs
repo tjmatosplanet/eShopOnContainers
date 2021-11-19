@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebhookClient.Models;
+﻿namespace WebhookClient.Services;
 
-namespace WebhookClient.Services
+public interface IWebhooksClient
 {
-    public interface IWebhooksClient
-    {
-        Task<IEnumerable<WebhookResponse>> LoadWebhooks();
-    }
+    Task<IEnumerable<WebhookResponse>> LoadWebhooks();
 }

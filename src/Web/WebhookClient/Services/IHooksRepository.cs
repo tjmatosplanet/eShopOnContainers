@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebhookClient.Models;
+﻿namespace WebhookClient.Services;
 
-namespace WebhookClient.Services
+public interface IHooksRepository
 {
-    public interface IHooksRepository
-    {
-        Task<IEnumerable<WebHookReceived>> GetAll();
-        Task AddNew(WebHookReceived hook);
-    }
+    Task<IEnumerable<WebHookReceived>> GetAll();
+    Task AddNew(WebHookReceived hook);
 }

@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Microsoft.eShopOnContainers.Services.Identity.API.Services
+﻿namespace Microsoft.eShopOnContainers.Services.Identity.API.Services
 {
     public class RedirectService : IRedirectService
     {
@@ -19,7 +17,7 @@ namespace Microsoft.eShopOnContainers.Services.Identity.API.Services
                 splitKey = "signin-oidc";
             else
                 splitKey = "scope";
-            
+
             results = Regex.Split(result, splitKey);
             if (results.Length < 2)
                 return "";
